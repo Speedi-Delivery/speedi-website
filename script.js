@@ -170,16 +170,38 @@ document.addEventListener("click", (e) => {
   anim.onfinish = () => biker.remove();
 });
 
-/* ---------- Forms (demo submit) ---------- */
+/* ---------- Forms (email via FormSubmit) ---------- */
 document.querySelectorAll("form.form").forEach((form) => {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
-    form.querySelector(".form-note").hidden = false;
-    form.querySelector("button[type=submit]").disabled = true;
-    form.querySelectorAll("input, textarea, select").forEach((f) => (f.disabled = true));
+    const btn = form.querySelector("button[type=submit]");
+    const note = form.querySelector(".form-note");
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    try {
+      const data = new FormData(form);
+      data.append("_subject", form.id === "applyForm" ? "New Speedi job application" : "New Speedi contact message");
+      const res = await fetch("https://formsubmit.co/ajax/contact@speedi.delivery", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      if (!res.ok) throw new Error();
+      note.hidden = false;
+      form.querySelectorAll("input, textarea, select").forEach((f) => (f.disabled = true));
+      btn.textContent = "Sent ⚡";
+    } catch {
+      // Fallback: open the user's mail client pre-filled
+      const body = [...new FormData(form).entries()].map(([k, v]) => `${k}: ${v}`).join("\n");
+      location.href = "mailto:contact@speedi.delivery?subject=" +
+        encodeURIComponent(form.id === "applyForm" ? "Speedi job application" : "Speedi contact") +
+        "&body=" + encodeURIComponent(body);
+      btn.disabled = false;
+      btn.textContent = "Send message";
+    }
   });
 });
