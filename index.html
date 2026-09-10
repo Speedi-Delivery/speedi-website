@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speedi — UNC's #1 Delivery Service</title>
+<meta name="description" content="Everything you need. In your hands. 15 minutes. Speedi delivers college essentials to UNC Chapel Hill, 5pm–2am every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#" class="nav-logo"><img src="logo.jpg" alt="Speedi logo"><span>SPEEDI</span></a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#products">Shop</a>
+    <a href="#contact">Contact</a>
+    <a href="work.html" class="nav-work">Work here</a>
+    <a href="#download" class="btn btn-sm">Get the app</a>
+  </div>
+  <button class="nav-burger" aria-label="Menu">☰</button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>SNACKS • DRINKS • STUDY FUEL • LATE NIGHT • 5PM–2AM • CHAPEL HILL • </span>
+      <span>SNACKS • DRINKS • STUDY FUEL • LATE NIGHT • 5PM–2AM • CHAPEL HILL • </span>
+    </div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">UNC's #1 Delivery Service</p>
+      <h1>Everything you need.<br>In your hands.<br><span class="hl">15 minutes.</span></h1>
+      <p class="hero-sub">Snacks, drinks, and college essentials delivered to your dorm door. Open 5pm–2am, every single day.</p>
+      <div class="hero-cta" id="download">
+        <a class="btn store-btn" href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">
+           iOS — App Store
+        </a>
+        <a class="btn btn-outline store-btn" href="https://play.google.com/store/search?q=speedi%20delivery&c=apps" target="_blank" rel="noopener">
+          ▶ Android — Google Play
+        </a>
+      </div>
+      <div class="qr-card" id="qrCard">
+        <img id="qrImg" alt="QR code to download the Speedi app" width="120" height="120" loading="lazy">
+        <div>
+          <strong>Scan to download</strong>
+          <p>Point your phone camera here to grab the app.</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stat reveal delay-1">
+      <div class="stat-ring">
+        <svg viewBox="0 0 200 200">
+          <circle class="ring-bg" cx="100" cy="100" r="88"/>
+          <circle class="ring-fg" cx="100" cy="100" r="88"/>
+        </svg>
+        <div class="stat-center">
+          <span class="stat-label">Average delivery</span>
+          <span class="stat-time"><b id="statMin">0</b>:<b id="statSec">00</b></span>
+          <span class="stat-sub">minutes : seconds</span>
+        </div>
+      </div>
+      <p class="stat-caption">Our average order arrives in <strong>8 minutes 47 seconds</strong>. Timed from checkout to your door.</p>
+    </div>
+  </div>
+</header>
+
+<!-- TIMELINE -->
+<section class="section timeline-section" id="how">
+  <h2 class="reveal">Placed → Delivered.<br><span class="hl">Watch it happen.</span></h2>
+  <p class="section-sub reveal">Drag the slider or hit play to see how fast an order moves.</p>
+
+  <div class="timeline reveal">
+    <div class="tl-track">
+      <div class="tl-progress" id="tlProgress"></div>
+      <div class="tl-rider" id="tlRider">🛵</div>
+      <div class="tl-stop" style="--pos:0%"   data-min="0">
+        <div class="tl-dot"></div><span class="tl-time">0 min</span><span class="tl-name">Placed</span>
+      </div>
+      <div class="tl-stop" style="--pos:20%"  data-min="1">
+        <div class="tl-dot"></div><span class="tl-time">1 min</span><span class="tl-name">Packed</span>
+      </div>
+      <div class="tl-stop" style="--pos:45%"  data-min="2">
+        <div class="tl-dot"></div><span class="tl-time">2 min</span><span class="tl-name">On its way</span>
+      </div>
+      <div class="tl-stop" style="--pos:100%" data-min="10">
+        <div class="tl-dot"></div><span class="tl-time">5–15 min</span><span class="tl-name">Delivered</span>
+      </div>
+    </div>
+    <div class="tl-controls">
+      <button class="btn btn-sm" id="tlPlay">▶ Play order</button>
+      <input type="range" id="tlSlider" min="0" max="100" value="0" aria-label="Order progress">
+      <span class="tl-status" id="tlStatus">Order placed ✅</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section dark" id="pricing">
+  <h2 class="reveal">Stop paying <span class="strike">$15 in fees</span><br><span class="hl">for a $6 snack.</span></h2>
+  <p class="section-sub reveal">Same order, three apps. You do the math.</p>
+
+  <div class="price-grid">
+    <div class="price-card speedi-card reveal">
+      <span class="badge">Best value</span>
+      <h3>Speedi <em>⚡</em></h3>
+      <ul>
+        <li><span>Delivery fee</span><strong>$1.99</strong></li>
+        <li><span>Service fee</span><strong>$0</strong></li>
+        <li><span>Markups</span><strong>$0</strong></li>
+        <li><span>Tip pressure</span><strong>None</strong></li>
+        <li><span>Avg. wait</span><strong>8m 47s</strong></li>
+      </ul>
+      <div class="price-total"><span>Total fees</span><strong data-count="1.99" data-prefix="$">$0</strong></div>
+    </div>
+    <div class="price-card reveal delay-1">
+      <h3>DoorDash</h3>
+      <ul>
+        <li><span>Delivery fee</span><strong>$3.99–$5.99</strong></li>
+        <li><span>Service fee</span><strong>~15% (~$2.50)</strong></li>
+        <li><span>Markups</span><strong>10–20% items</strong></li>
+        <li><span>Expected tip</span><strong>$3–$5</strong></li>
+        <li><span>Avg. wait</span><strong>35–45 min</strong></li>
+      </ul>
+      <div class="price-total"><span>Total fees</span><strong data-count="12.50" data-prefix="~$">$0</strong></div>
+    </div>
+    <div class="price-card reveal delay-2">
+      <h3>Gopuff</h3>
+      <ul>
+        <li><span>Delivery fee</span><strong>$3.95</strong></li>
+        <li><span>Service fee</span><strong>$3.49 small-order</strong></li>
+        <li><span>Markups</span><strong>Priced-up items</strong></li>
+        <li><span>Expected tip</span><strong>$2–$4</strong></li>
+        <li><span>Avg. wait</span><strong>25–40 min</strong></li>
+      </ul>
+      <div class="price-total"><span>Total fees</span><strong data-count="10.40" data-prefix="~$">$0</strong></div>
+    </div>
+  </div>
+  <p class="fine-print reveal">Competitor figures are typical estimates for a small late-night order in Chapel Hill and vary by order.</p>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="products">
+  <h2 class="reveal">Shop by <span class="hl">category.</span></h2>
+  <p class="section-sub reveal">Everything below is in the app, a tap away.</p>
+  <div class="product-grid">
+    <a class="product reveal" href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">
+      <img class="product-img" src="https://img.speedi.delivery/products_image/1698552217_2037862506.png" alt="Snacks" loading="lazy"><h4>Snacks</h4><span class="product-cta">Shop in app →</span>
+    </a>
+    <a class="product reveal delay-1" href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">
+      <img class="product-img" src="https://img.speedi.delivery/products_image/1694704244_1755274725.png" alt="Beverages" loading="lazy"><h4>Beverages</h4><span class="product-cta">Shop in app →</span>
+    </a>
+    <a class="product reveal delay-2" href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">
+      <img class="product-img" src="https://img.speedi.delivery/products_image/1699316075_1210441958.png" alt="Candy and gummies" loading="lazy"><h4>Candy & Gummies</h4><span class="product-cta">Shop in app →</span>
+    </a>
+    <a class="product reveal delay-3" href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">
+      <img class="product-img" src="https://img.speedi.delivery/products_image/1695677999_299898006.png" alt="Hygiene and medicine" loading="lazy"><h4>Hygiene & Medicine</h4><span class="product-cta">Shop in app →</span>
+    </a>
+    <a class="product reveal delay-1" href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">
+      <img class="product-img" src="https://img.speedi.delivery/products_image/1732416618_879459244.png" alt="Dorm essentials" loading="lazy"><h4>Dorm Essentials</h4><span class="product-cta">Shop in app →</span>
+    </a>
+  </div>
+  <div class="cat-chips reveal">
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Ice Cream</a>
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Chips</a>
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Soda</a>
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Caffeine</a>
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Chocolate</a>
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Health / Protein</a>
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Frozen Food</a>
+    <a href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Cereal</a>
+  </div>
+  <div class="center reveal">
+    <a class="btn" href="https://apps.apple.com/us/app/speedi-delivery/id6468661813" target="_blank" rel="noopener">Browse everything in the app</a>
+  </div>
+</section>
+
+<!-- WORK BANNER -->
+<section class="work-banner">
+  <div class="reveal">
+    <h2>Ride for Speedi. <span class="hl">Get paid fast.</span></h2>
+    <p>Work only when you want. Payouts that don't make you wait.</p>
+  </div>
+  <a href="work.html" class="btn btn-dark reveal delay-1">See open gigs →</a>
+</section>
+
+<!-- CONTACT -->
+<section class="section dark" id="contact">
+  <div class="contact-wrap">
+    <div class="reveal">
+      <h2>Say <span class="hl">hey.</span></h2>
+      <p class="section-sub">Questions, feedback, partnership ideas — we read everything.</p>
+      <ul class="contact-info">
+        <li>📍 157 E Franklin Street, Chapel Hill, NC 27514</li>
+        <li>✉️ contact@speedi.delivery</li>
+        <li>🕐 Open 5pm–2am, every day</li>
+        <li>📸 <a href="https://www.instagram.com/speedi.delivery/" target="_blank" rel="noopener">@speedi.delivery</a></li>
+      </ul>
+    </div>
+    <form class="form reveal delay-1" id="contactForm" novalidate>
+      <label>Name<input type="text" name="name" required placeholder="Rameses the Ram"></label>
+      <label>Email<input type="email" name="email" required placeholder="you@unc.edu"></label>
+      <label>Message<textarea name="message" rows="4" required placeholder="What's up?"></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p class="form-note" hidden>Thanks! We'll get back to you fast. ⚡</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>SPEEDI ⚡ — Chapel Hill, NC</span>
+  <span>Everything you need. In your hands. 15 minutes.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

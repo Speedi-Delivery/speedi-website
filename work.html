@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work at Speedi — Ride when you want, get paid fast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><img src="logo.jpg" alt="Speedi logo"><span>SPEEDI</span></a>
+  <div class="nav-links">
+    <a href="index.html#how">How it works</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#products">Shop</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="work.html" class="nav-work">Work here</a>
+    <a href="index.html#download" class="btn btn-sm">Get the app</a>
+  </div>
+  <button class="nav-burger" aria-label="Menu">☰</button>
+</nav>
+
+<header class="hero work-hero">
+  <div class="hero-inner one-col">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Now hiring riders & packers</p>
+      <h1>Your schedule.<br>Your hustle.<br><span class="hl">Your money — fast.</span></h1>
+      <p class="hero-sub">Deliver for the fastest crew in Chapel Hill. No shifts you didn't choose, no waiting weeks to get paid.</p>
+      <a href="#apply" class="btn">Apply in 2 minutes ↓</a>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <h2 class="reveal">Why riders <span class="hl">stick around.</span></h2>
+  <div class="perk-grid">
+    <div class="perk reveal">      <h3>Work only when you want</h3>
+      <p>No minimum hours, no mandatory shifts. Open the app, go online between classes, log off whenever. Your calendar is yours.</p>
+    </div>
+    <div class="perk reveal delay-1">      <h3>Fast payouts</h3>
+      <p>Get your earnings out fast — no waiting around for a biweekly paycheck. Deliver tonight, get paid right away.</p>
+    </div>
+    <div class="perk reveal delay-2">      <h3>Tiny delivery zone</h3>
+      <p>Everything is on or near campus. Short runs, more deliveries per hour, no 20-minute drives across town.</p>
+    </div>
+    <div class="perk reveal">      <h3>Student-run crew</h3>
+      <p>Built by UNC students, for UNC students. You'll be delivering with classmates, not an anonymous gig algorithm.</p>
+    </div>
+    <div class="perk reveal delay-1">      <h3>Night-owl friendly</h3>
+      <p>We run 5pm–2am — perfect hours if your mornings are for lectures (or sleeping).</p>
+    </div>
+    <div class="perk reveal delay-2">      <h3>Busy = money</h3>
+      <p>8-minute average deliveries mean high volume. More drops, more earnings, less dead time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="apply">
+  <div class="contact-wrap">
+    <div class="reveal">
+      <h2>Apply <span class="hl">now.</span></h2>
+      <p class="section-sub">Takes about two minutes. We'll reach out within a couple days.</p>
+      <ul class="contact-info">
+        <li>✅ 18+ and eligible to work in the US</li>
+        <li>✅ Bike, scooter, car, or fast feet</li>
+        <li>✅ Available at least a few evenings a month</li>
+      </ul>
+    </div>
+    <form class="form reveal delay-1" id="applyForm" novalidate>
+      <label>Full name<input type="text" name="name" required placeholder="Rameses the Ram"></label>
+      <label>Email<input type="email" name="email" required placeholder="you@unc.edu"></label>
+      <label>Phone<input type="tel" name="phone" required placeholder="(919) 555-0123"></label>
+      <label>Role
+        <select name="role" required>
+          <option value="" disabled selected>Choose one</option>
+          <option>Delivery rider</option>
+          <option>Order packer</option>
+          <option>Either — put me where I'm needed</option>
+        </select>
+      </label>
+      <label>How do you get around?
+        <select name="transport" required>
+          <option value="" disabled selected>Choose one</option>
+          <option>Bike</option>
+          <option>E-scooter / e-bike</option>
+          <option>Car</option>
+          <option>On foot</option>
+        </select>
+      </label>
+      <label>Anything else we should know?<textarea name="notes" rows="3" placeholder="Availability, experience, fun facts…"></textarea></label>
+      <button class="btn" type="submit">Submit application</button>
+      <p class="form-note" hidden>Application received! We'll be in touch soon. ⚡</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>SPEEDI ⚡ — Chapel Hill, NC</span>
+  <span><a href="index.html">← Back to home</a></span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
