@@ -17,6 +17,7 @@ h2{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;line-height:1.1;letter-spa
 .dark .hl{color:var(--black)}
 .strike{text-decoration:line-through;text-decoration-color:var(--yellow);text-decoration-thickness:.12em;opacity:.7}
 a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 
 /* Scroll reveal */
 .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
@@ -153,6 +154,8 @@ a{color:inherit}
 .form input,.form textarea,.form select{background:#0d0d0d;border:1px solid rgba(255,255,255,.18);color:#fff;padding:.75rem .9rem;border-radius:10px;font:inherit;transition:border-color .2s}
 .form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--yellow)}
 .form-note{color:var(--yellow);font-weight:600}
+.form-privacy{font-size:.78rem;line-height:1.45;color:#a9a195}
+.form-privacy a{color:var(--yellow)}
 
 /* Perks (work page) */
 .perk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem}
@@ -167,6 +170,28 @@ a{color:inherit}
 .click-biker{position:fixed;z-index:999;font-size:2.5rem;pointer-events:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3));animation:biker-bob .3s ease-in-out infinite alternate}
 @keyframes biker-bob{from{margin-top:0}to{margin-top:-4px}}
 
+/* Policy and help pages */
+.page-hero{background:var(--black);color:#fff;padding:4.5rem clamp(1rem,4vw,3rem) 3.5rem}
+.page-hero-inner{max-width:850px;margin:0 auto}
+.page-hero p{color:#cfc8bd;max-width:42rem;margin-top:1rem;font-size:1.05rem}
+.policy-page{max-width:850px;margin:0 auto;padding:4rem clamp(1rem,4vw,3rem) 5rem}
+.policy-page h2{font-size:clamp(1.4rem,3vw,2rem);margin-top:2.6rem}
+.policy-page h2:first-child{margin-top:0}
+.policy-page h3{font-size:1.1rem;margin-top:1.5rem}
+.policy-page p,.policy-page li{color:#4c443a}
+.policy-page p+.policy-page p{margin-top:1rem}
+.policy-page ul{padding-left:1.3rem;margin:1rem 0;display:grid;gap:.55rem}
+.policy-page a{color:#8a5a00;font-weight:700}
+.policy-meta{color:var(--gray);font-size:.9rem;margin-top:1rem}
+.policy-callout{background:#fff2d9;border-left:5px solid var(--yellow);border-radius:0 var(--radius) var(--radius) 0;padding:1rem 1.2rem;margin:1.5rem 0;color:#4c443a}
+.policy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:2rem}
+.policy-card{background:#fff;border:2px solid var(--black);border-radius:var(--radius);padding:1.35rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.policy-card:hover{transform:translateY(-4px);box-shadow:5px 5px 0 var(--yellow)}
+.policy-card h2{font-size:1.2rem;margin:0 0 .4rem}.policy-card p{color:var(--gray);font-size:.92rem}
+
 /* Footer */
-.footer{background:var(--black);color:#a9a195;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.6rem clamp(1rem,4vw,3rem);font-size:.85rem;border-top:1px solid rgba(255,255,255,.1)}
+.footer{background:var(--black);color:#a9a195;display:flex;justify-content:space-between;align-items:flex-start;gap:1.2rem;flex-wrap:wrap;padding:1.6rem clamp(1rem,4vw,3rem);font-size:.85rem;border-top:1px solid rgba(255,255,255,.1)}
+.footer>div{display:grid;gap:.15rem}.footer strong{color:#fff;font-family:'Archivo',sans-serif;letter-spacing:.04em}
+.footer-links{display:flex;gap:.55rem 1rem;flex-wrap:wrap;justify-content:flex-end}
 .footer a{color:var(--yellow)}
+@media(max-width:650px){.footer-links{justify-content:flex-start}.page-hero{padding-top:3rem}.policy-page{padding-top:3rem}}
